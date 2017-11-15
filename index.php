@@ -3,11 +3,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
 <head>
     <meta charset = "UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <?php include 'menu.php'; ?>
-    <title>
-        UBERMO
-    </title>
+    <title>UBERMO</title>
 </head>
 
 <body>

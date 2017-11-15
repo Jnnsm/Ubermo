@@ -1,22 +1,26 @@
 body{
-    background: linear-gradient(#A9A9A9,#BEBEBE,#F5F5F5);
+    background: linear-gradient(#D3D3D3,#F5F5F5);
     padding-top: 30px;
 }
 *{
     padding: 0px;
     margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(117, 117, 117);
 }
+
 footer{
+    display:inline-block;
     background: #ae000e;
     color: #ffffff;
     width: 100%;
     height: 60px;
     margin-top: 20px;
     text-align: center;
-    -webkit-box-shadow: 0px -10px 1px #ae000e; /* Safari & Chrome */
-    -moz-box-shadow: 0px -10px 1px #ae000e; /* Firefox */
-    -o-box-shadow: 0px -10px 1px #ae000e; /* Opera */
-    box-shadow: 0px -10px 1px #ae000e;
+    -webkit-box-shadow: 0px -2px 4px #ae000e; /* Safari & Chrome */
+    -moz-box-shadow: 0px -2px 4px #ae000e; /* Firefox */
+    -o-box-shadow: 0px -2px 4px #ae000e; /* Opera */
+    box-shadow: 0px -2px 4px #ae000e;
 }
 
 #navbar{
@@ -28,13 +32,14 @@ footer{
     margin-right:2px;
     top:0;
     left:0;
-    -webkit-box-shadow: 0px 10px 15px #111214; /* Safari & Chrome */
-    -moz-box-shadow: 0px 10px 15px #111214; /* Firefox */
-    -o-box-shadow: 0px 10px 15px #111214; /* Opera */
-    box-shadow: 0px 10px 15px #111214;
+    -webkit-box-shadow: 0px 2px 7px #111214; /* Safari & Chrome */
+    -moz-box-shadow: 0px 2px 7px #111214; /* Firefox */
+    -o-box-shadow: 0px 2px 7px #111214; /* Opera */
+    box-shadow: 0px 2px 7px #111214;
 }
 
 #navbar-image{
+    all:initial;
     background-image: url("UBERMO_LOGO.png");
     width: 90px;
     height: 30px;
@@ -90,44 +95,55 @@ a:active{
 }
 
 input[type=text], select {
-    width: 80%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ae000e;
+    border: 2px solid #ae000e;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
 input[type=password], select {
-    width: 80%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ae000e;
+    border: 2px solid #ae000e;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
 input[type=submit] {
-    width: 30%;
-    background-color: #710008;
+    background-color: #ae000e;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 6px 20px;
+    margin: 4px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 input[type=submit]:hover {
-    background-color: #ae000e;
-    background-position: center center;
+    background-color: #710008;
+}
+
+#normalhl{
+    all:initial;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ae000e;
+}
+#normalhl:hover{
+    color: #ae000e;
 }
 
 #box{
     padding-top: 30px;
     width: 90%;
     margin: 0 auto;
-    height: 70%
+    height:100%;
+}
+#logbox{
+    margin-top:30px;
+    padding-right: 20%;
 }
