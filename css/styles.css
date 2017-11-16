@@ -1,7 +1,7 @@
 body{
     background: linear-gradient(#D3D3D3,#F5F5F5);
-    padding-top: 30px;
 }
+
 *{
     padding: 0px;
     margin: 0px;
@@ -14,7 +14,6 @@ footer{
     background: #ae000e;
     color: #ffffff;
     width: 100%;
-    height: 60px;
     margin-top: 20px;
     text-align: center;
     -webkit-box-shadow: 0px -2px 4px #ae000e; /* Safari & Chrome */
@@ -24,7 +23,7 @@ footer{
 }
 
 #navbar{
-    background: #05080d;
+    background: rgba(5,8,13,0.5);
     width: 100%;
     height: 30px;
     float: right;

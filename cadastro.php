@@ -10,7 +10,14 @@
                     <input type="text" name="telefone" placeholder = "Telefone"><br>
                     <input type="password" name="senha" placeholder = "Senha"><br>
                     <input type="password" name="senhac" placeholder = "Confirmar Senha"><br>
-                    <input maxlength="11" type="text" name="cpf" placeholder = "CPF"><br>
+                    <input maxlength="11" type="text" name="cpf" placeholder = "CPF/CNPJ"><br><br>
+                    <input type="text" name="pais" placeholder = "Endereço: País"><br>
+                    <input type="text" name="estado" placeholder = "Endereço: Estado"><br>
+                    <input type="text" name="cidade" placeholder = "Endereço: Cidade"><br>
+                    <input type="text" name="rua" placeholder = "Endereço: Rua"><br>
+                    <input type="text" name="numero" placeholder = "Endereço: Número"><br>
+                    <input type="text" name="complemento" placeholder = "Endereço: Complemento"><br>
+                    <input type="text" name="bairro" placeholder = "Endereço: Bairro"><br><br>
                     <input maxlength="16" type="text" name="cartao" placeholder = "Cartão de Crédito"><br>
                     <input maxlength="2" type="text" name="cartaovm" placeholder = "Vencimento: Mês">
                     <input maxlength="2" type="text" name="cartaova" placeholder = "Vencimento: Ano"><br>
