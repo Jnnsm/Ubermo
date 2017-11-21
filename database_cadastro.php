@@ -1,29 +1,18 @@
 <?php
+include "class_cliente.php";
 function cadastro($l){
-    $nome = $_POST['nome'];
-    $email = $_POST['chave'];
-    $senha = sha1($_POST['senha']);
-    $senhaconf = sha1($_POST['senhac']);
-    $cpf = $_POST['cpf'];
+    $cliente = new Cliente($_POST['nome'], $_POST['chave'], $_POST['telefone']
+    ,sha1($_POST['senha']), sha1($_POST['senhac']), $_POST['cpf'],
+    $_POST['pais'], $_POST['estado'], $_POST['cidade'], $_POST['rua'],
+    $_POST['numero'], $_POST['complemento'], $_POST['bairro'], $_POST['cartao'],
+    $_POST['cartaova'], $_POST['cartaovm'], $_POST['cartaocs']);
 
-    if($nome != '' && $email != '' && $senha != '' && $senhaconf != ''
-    && $senha == $senhaconf && $cpf != ''){
-        $query = "INSERT INTO cliente (email, nome, senha, foto, cpf,
-            pontuacao) VALUES ('".$email."', '".$nome."','".$senha."','https://goo.gl/1ZQr7W',
-            '".$cpf."',0)";
-            if(mysqli_query($l, $query)){
-                echo '<script type="text/javascript" src="popup.js"></script>';
-                echo '<script> alert("Registro feito"); </script>';
-            }
-            else{
-                echo '<script type="text/javascript" src="popup.js"></script>';
-                echo '<script> alert("Usuário já cadastrado"); </script>';
-            }
-        }
-        else{
-            echo '<script type="text/javascript" src="popup.js"></script>';
-            echo '<script> alert("Dados Inválidos"); </script>';
-        }
-        echo '<script> alert(mysqli_error($l)); </script>';
+    if($cliente->validEntry()){
+        $cliente->clienteSet($l);
     }
+    else{
+        echo '<script type="text/javascript" src="popup.js"></script>';
+        echo '<script> alert("Dados Inválidos"); </script>';
+    }
+}
 ?>
