@@ -1,5 +1,7 @@
 <?php
+    include 'database_connect.php';
     session_start();
+    $link = connect();
 ?>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>

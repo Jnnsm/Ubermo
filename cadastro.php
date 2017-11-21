@@ -1,9 +1,9 @@
-<?php include 'menu.php'; ?>
+<?php include 'menu.php'; include "database_cadastro.php"; ?>
 <body>
     <div id="box">
         <div style="width: 50%; float:left;">
             <div id="logbox">
-                <form>
+                <form method="post" action="">
                     <p style="display: inline-block;margin: auto;" align= "left"><b>Crie sua conta <span style="color: #ae000e;">grátis</span></b></p>
                     <input style="margin-top:30px;" type="text" name="nome" placeholder = "Nome"><br>
                     <input type="text" name="chave" placeholder = "E-mail"><br>
@@ -24,6 +24,11 @@
                     <input maxlength="3" type="text" name="cartaocs" placeholder = "Código de segurança"><br><br>
                     <input type="submit" value="Confirmar">
                 </form>
+                <?php
+                    if($_POST){
+                        cadastro($link);
+                    }
+                ?>
             </div>
         </div>
         <div style="width: 50%; float:right;padding-top:30px;text-align:justify;text-justify: inter-word;">

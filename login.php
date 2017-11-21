@@ -1,4 +1,4 @@
-<?php include 'menu.php'; ?>
+<?php include 'menu.php'; include 'database_login.php'; ?>
 <body>
     <div id="box">
         <div style="width: 50%; float:left;">
@@ -22,17 +22,8 @@
         </div>
     </div>
     <?php
-        if($_POST){
-            $email = $_POST['nome'];
-            $senha = $_POST['senha'];
-            date_default_timezone_set("America/Sao_Paulo");
-            $_SESSION['email'] = $email;
-            $_SESSION['senha'] = $senha;
-            $_SESSION['date'] = date('d-m-y');
-            $_SESSION['time'] = date('H:i:s');
-            header("Location: index.php"); /* Redirect browser */
-            exit();
-        }
+        if($_POST)
+            login($link);
     ?>
 </body>
 <?php include 'footer.php'; ?>
