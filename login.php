@@ -1,4 +1,4 @@
-<?php include 'menu.php'; include 'database_login.php'; ?>
+<?php include 'menu.php'; include 'database_login.php';?>
 <body>
     <div id="box">
         <div style="width: 50%; float:left;">
@@ -22,8 +22,9 @@
         </div>
     </div>
     <?php
-        if($_POST)
+        if($_POST){
             login($link);
+        }
     ?>
 </body>
 <?php include 'footer.php'; ?>

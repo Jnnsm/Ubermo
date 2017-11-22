@@ -1,7 +1,7 @@
 <?php
-include "class_cliente.php";
+include "class_clientecadastro.php";
 function cadastro($l){
-    $cliente = new Cliente($_POST['nome'], $_POST['chave'], $_POST['telefone']
+    $cliente = new Cliente_cadastro($_POST['nome'], $_POST['chave'], $_POST['telefone']
     ,sha1($_POST['senha']), sha1($_POST['senhac']), $_POST['cpf'],
     $_POST['pais'], $_POST['estado'], $_POST['cidade'], $_POST['rua'],
     $_POST['numero'], $_POST['complemento'], $_POST['bairro'], $_POST['cartao'],

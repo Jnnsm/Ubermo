@@ -74,11 +74,11 @@ a:visited{
 }
 
 a:hover{
-    color: lightgrey;
+    color: white;
     text-decoration: none;
     display: inline-block;
     text-align: center;
-    background-color: #ae000e;
+    background-color: #710008;
     padding: 3px 15px;
     border-radius: 5px;
 }
@@ -132,6 +132,7 @@ input[type=submit]:hover {
     font-family: 'Source Sans Pro', sans-serif;
     color: #ae000e;
 }
+
 #normalhl:hover{
     color: #ae000e;
 }
@@ -142,7 +143,44 @@ input[type=submit]:hover {
     margin: 0 auto;
     height:100%;
 }
+
 #logbox{
     margin-top:30px;
     padding-right: 20%;
+}
+
+#userbox{
+    background-color: #bbbbbb;
+    margin-top: 30px;
+    margin-left: -30px;
+    width: 225px;
+    height: 450px;
+    border: 5px solid #bbbbbb;
+    float: left;
+    border-radius: 10px;
+
+}
+
+#userbox-image{
+    height: 50%;
+    border: 3px solid #222222;
+}
+
+#userbox-buttons{
+    height: 50%;
+}
+
+#buttons{
+    display: block;
+    background-color: #b34c00;
+    color: white;
+    padding: 4px 15px;
+    margin: 4px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align:center;
+}
+
+#buttons:hover {
+    background-color: #743100;
 }

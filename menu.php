@@ -1,5 +1,6 @@
 <?php
     include 'database_connect.php';
+    include 'class_user.php';
     session_start();
     $link = connect();
 ?>
@@ -12,6 +13,7 @@
         <?PHP
             if (!empty($_SESSION)){
                 echo '<a href="painel.php">Painel</a> <a href="logout.php">Logout</a>';
+                $user = new User($_SESSION['email'], $_SESSION['tipo'], $link);
             }
             else{
                 echo '<a href="login.php">Entre</a>';
