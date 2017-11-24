@@ -50,7 +50,7 @@ class Cliente_cadastro{
         '".$this->senha."','".$this->foto."','".$this->cpf."',0)";
 
         $exists = false;
-        
+
         $query2 = "SELECT * FROM prestador WHERE `email` = '".$this->email."'";
         $result = mysqli_query($link, $query2);
         if($result->num_rows > 0){
@@ -89,7 +89,7 @@ class Cliente_cadastro{
     }
     public function cartaoSet($link){
         $query = "INSERT INTO cartao (mesVencimento, anoVencimento,
-        codSegurança, numeroCartao, Cliente_email) VALUES ('".$this->cartaovm."',
+        codSeguranca, numeroCartao, Cliente_email) VALUES ('".$this->cartaovm."',
         '".$this->cartaova."','".$this->cartaocs."','".$this->cartao."',
         '".$this->email."')";
         mysqli_query($link, $query);
