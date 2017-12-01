@@ -1,4 +1,4 @@
-<?php include 'menu.php'; include 'database_login.php';?>
+<?php include 'menu.php'; include 'database_login.php';  if(isset($_SESSION['email'])){header("Location: index.php"); exit();}?>
 <body>
     <div id="box">
         <div style="width: 50%; float:left;">
@@ -12,7 +12,7 @@
                 </form>
             </div>
         </div>
-        <div style="width: 50%; float:right;padding-top:30px;text-align:justify;text-justify: inter-word;">
+        <div id='userftext'>
             <b>A sua conta é tão segura quanto o seu próprio computador.</b><br><br>
             Nunca digite a sua senha em um dispositivo no qual você não confie
             totalmente, nem faça login na sua conta em um computador

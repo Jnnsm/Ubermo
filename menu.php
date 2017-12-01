@@ -4,6 +4,8 @@
     session_start();
     $link = connect();
 ?>
+<title>UBERMO</title>
+<meta charset = "UTF-8">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 <div id="navbar">
@@ -12,8 +14,10 @@
         <a href="index.php">Home</a>
         <?PHP
             if (!empty($_SESSION)){
-                echo '<a href="painel.php">Painel</a> <a href="logout.php">Logout</a>';
                 $user = new User($_SESSION['email'], $_SESSION['tipo'], $link);
+                if($user->getTipo() == 'cliente')
+                    echo '<a href="servicos.php">Serviços</a> ';
+                echo '<a href="painel.php">Painel</a> <a href="logout.php">Logout</a>';
             }
             else{
                 echo '<a href="login.php">Entre</a>';

@@ -1,9 +1,9 @@
-<?php include 'menu.php'; ?>
+<?php include 'menu.php'; include "database_prestador_cadastro.php"; ?>
 <body>
     <div id="box">
         <div style="width: 50%; float:left;">
             <div id="logbox">
-                <form>
+                <form method="post" action="">
                     <p style="display: inline-block;margin: auto;" align= "left"><b>Crie sua conta <span style="color: #ae000e;">grátis</span></b></p>
                     <input style="margin-top:30px;" type="text" name="nomep" placeholder = "Nome"><br>
                     <input type="text" name="chavep" placeholder = "E-mail"><br>
@@ -22,9 +22,14 @@
                     <input type="text" name="numeroconta" placeholder = "Número da Conta"><br><br>
                     <input type="submit" value="Confirmar">
                 </form>
+                <?php
+                    if($_POST){
+                        cadastro_p($link);
+                    }
+                ?>
             </div>
         </div>
-        <div style="width: 50%; float:right;padding-top:30px;text-align:justify;text-justify: inter-word;">
+        <div id='userftext'>
             <b>A sua senha é a sua chave mestra de criptografia.</b><br>
             <br>A segurança da sua conta depende da dificuldade da sua senha. Senhas que são muito curtas, muito simples ou que incluem palavras do dicionário são fáceis de adivinhar.<br>
             <br><b>Não esqueça da sua senha.</b><br>

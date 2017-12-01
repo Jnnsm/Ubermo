@@ -1,4 +1,4 @@
-<?php include 'menu.php'; include "database_cadastro.php"; ?>
+<?php include 'menu.php'; include "database_cliente_cadastro.php"; ?>
 <body>
     <div id="box">
         <div style="width: 50%; float:left;">
@@ -31,7 +31,7 @@
                 ?>
             </div>
         </div>
-        <div style="width: 50%; float:right;padding-top:30px;text-align:justify;text-justify: inter-word;">
+        <div id='userftext'>
             <b>A sua senha é a sua chave mestra de criptografia.</b><br>
             <br>A segurança da sua conta depende da dificuldade da sua senha. Senhas que são muito curtas, muito simples ou que incluem palavras do dicionário são fáceis de adivinhar.<br>
             <br><b>Não esqueça da sua senha.</b><br>
